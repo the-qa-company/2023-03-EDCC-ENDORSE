@@ -5,6 +5,8 @@ Presentation for Semantics 2022 by Dennis Diefenbach (The QA Company), Ivo Velit
 ### To deploy
 
 To deploy:
+- git clone https://github.com/the-qa-company/2022-05-24-EDCC.git
+- cd 2022-05-24-EDCC
 - npm install
 - npm start
 
