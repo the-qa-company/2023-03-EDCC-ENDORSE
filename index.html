@@ -19,316 +19,294 @@
 			<div class="slides">
 				<!-- First slide -->
 				<section ch="-1" style="position: relative; height: 100%;">
-					<h3 style="color: rgb(10,100,147); margin: 5%">The EU Knowledge Graph:<br>a Wikibase instance</h3>
-					<div style="font-size: 25px; padding-top: 10px;">Max De Wilde (DG CNECT, European Commission)</div>
-					<div style="font-size: 25px; padding-top: 10px;">Dennis Diefenbach (The QA Company)</div>
-					<div style="font-size: 25px; padding-top: 50px;">@ SEMIC Workshop</div>
-					<div style="font-size: 25px; padding-top: 25px;">12.04.2022</div>
+					<h3 style="color: rgb(10,100,147); margin: 5%">EDCC Knowledge Base</h3>
+					<div style="font-size: 25px; padding-top: 10px;">Dennis Diefenbach</div>
+					<div style="font-size: 25px; padding-top: 50px;">@ Semantics </div>
+					<div style="font-size: 25px; padding-top: 25px;">24.05.2022</div>
 					<div style="display: flex; margin-top:3%">
-						<img src="assets/SEMIC.png" style="margin: auto; height: 150px; border: none; box-shadow: none;">
+<!--						<img src="assets/SEMIC.png" style="margin: auto; height: 150px; border: none; box-shadow: none;">-->
+<!--						<img src="http://commons.wikimedia.org/wiki/Special:FilePath/European%20Commission.svg" style="margin-top: 5%; height: 100px; border: none; box-shadow: none;">-->
                     	<img src="assets/logo_QA.png" style="margin:auto; height: 100px; border: none; box-shadow: none;">
 					</div>
-					<!--<img src="http://commons.wikimedia.org/wiki/Special:FilePath/European%20Commission.svg" style="margin-top: 5%; height: 100px; border: none; box-shadow: none;">-->
+
 					<!--<h4>From BibTeX input:</h4>-->
 					<div id="key1" class="cite" data-type="bib" ></div>
 					<div id="key2" class="cite" data-type="bib" ></div>
 				</section>
 				<!-- Outline -->
-				<section ch="0">
-					<h2>Outline</h2>
-					<ol>
-						<li><a href="#/wikibase"><div style="display: inline-block; background: darkcyan; width: 35px; height: 35px"></div> Wikibase</a></li>
-						<li><a href="#/EUKG"><div style="display: inline-block; background: rebeccapurple; width: 35px; height: 35px"></div> The EU Knowledge Graph</a></li>
-						<li><a href="#/kohesio"><div style="display: inline-block; background: #cd0027; width: 35px; height: 35px"></div> Use Case: Kohesio</a></li>
-						<li><a href="#/conclusion"><div style="display: inline-block; background: orange; width: 35px; height: 35px"></div> Conclusion</a></li>
-					</ol>
-				</section>
-
-				<section ch="1" id="wikibase">
-					<h2>What is Wikibase?</h2>
-				</section>
-				<section ch="1">
-					<div>Wikimedia hosts many wikis...</div>
-					<img src="assets/wikimedia_projects.png" style="width: 60%;">
-				</section>
-				<section ch="1" data-background-iframe="https://www.wikidata.org/wiki/Q458" data-background-interactive>
-					<div style="margin-bottom: 90%">Wikidata is one of them!</div>
-				</section>
-				<section ch="1" data-background-iframe="https://wikiba.se" data-background-interactive>
-					<div style="margin-top: 38%">Wikibase is the software behind Wikidata</div>
-				</section>
-                <section ch="1" >
-					<div>Architecture</div>
-                    <img src="assets/wikibase_architecture.png" style="width: 80%;">
-				</section>
-                <section ch="1" >
-					<div>Docker image</div>
-                    <img src="assets/wikibase_docker.png" style="width: 80%;">
-				</section>
-				<section ch="1" >
-					<div>Comparison with classical approach</div>
-                    <img src="assets/classical_vs_wikibase.png" style="width: 70%;">
-					<div style="font-size: 15pt">Source: Dennis Diefenbach, Max De Wilde and Samantha Alipio (ISWC 2021)<br><a href="https://hal.archives-ouvertes.fr/hal-03353225/document">Wikibase as an Infrastructure for Knowledge Graphs: the EU Knowledge Graph</a></div>
-				</section>
-
-				<section ch="2" id="EUKG">
-					<h2>The EU Knowledge Graph<div style="vertical-align: top; font-size: smaller; display: inline;"></div></h2>
-				</section>
-				<section ch="2">
-					<div>A data repository to store structured data<br>about the European Union</div>
-				</section>
-				<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/The_EU_Knowledge_Graph" data-background-interactive>
-					<div style="margin-top: 50%">Available at <a href="https://linkedopendata.eu/">https://knowledgegraph.eu/</a> </div>
-				</section>
-				<section>
-					<section ch="2">
-						<h3> Why using Wikibase?</h3>
-					</section>
-					<section ch="2">
-						<div>User-friendly</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q1" data-background-interactive>
-					</section>
-					<section ch="2">
-						<div>Graph structure</div>
-					</section>
-					<section ch="2" data-background-iframe="https://query.wikidata.org/embed.html#%23defaultView%3AGraph%0ASELECT%20%3Fitem%20%3FitemLabel%0AWHERE%0A%7B%0A%20%20%3Fitem%20%3FpDirect%20%3FlinkTo%20.%0A%20%20VALUES%20%3Fitem%20%7B%20wd%3AQ458%20%7D%0A%20%20%3Fitem%20rdfs%3Alabel%20%3FitemLabel%20.%0A%20%20FILTER%28lang%28%3FitemLabel%29%3D%22en%22%29%0A%7D" data-background-interactive>
-					</section>
-					<section ch="2">
-						<div>Can be queried</div>
-					</section>
-					<section ch="2" data-background-iframe="https://query.linkedopendata.eu/#%20SELECT%20DISTINCT%20%3Fcountry%20%3Fpopulation%20WHERE%20%7B%20%0A%20%20%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fentity%2FQ1%3E%20%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fprop%2Fdirect%2FP104%3E%20%20%3Fo1%20.%20%0A%20%20%20%3Fo1%20rdfs%3Alabel%20%3Fcountry%20.%0A%20%20%20FILTER%20%28lang%28%3Fcountry%29%3D%22en%22%29%0A%20%20%20%3Fo1%20%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fprop%2Fdirect%2FP9%3E%20%20%3Fpopulation%20.%20%0A%20%7D%20%20order%20by%20desc%28%3Fpopulation%29" data-background-interactive>
-					</section>
-					<section ch="2">
-						<div>Can be edited by humans and by bots</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q1" data-background-interactive>
-						<div style="z-index: 2"><a href="https://linkedopendata.eu/wiki/Item:Q1" target="_blank">https://linkedopendata.eu/wiki/Item:Q1</a></div>
-					</section>
-					<section ch="2">
-						<div>Scales well</div>
-					</section>
-					<section ch="2">
-						<div>Wikibase hosts Wikidata, one of the largest existing KG which contains 5 billion triples</div>
-					</section>
-					<section ch="2">
-						<div>Multilingual</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q1" data-background-interactive>
-						<div><a style="z-index: 2" href="https://linkedopendata.eu/wiki/Item:Q1" target="_blank">https://linkedopendata.eu/wiki/Item:Q1</a></div>
-					</section>
-					<section ch="2">
-						<div>Full track of changes</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q74781" data-background-interactive>
-					</section>
-				</section>
-				<section>
-					<section ch="2">
-						<h3>Current content...</h3>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q65" data-background-interactive>
-						<div>European institutions</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q23" data-background-interactive>
-						<div>European countries</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q52" data-background-interactive>
-						<div>Capital cities</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q131" data-background-interactive>
-						<div>Heads of States</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q8361" data-background-interactive>
-						<div>Directorates-General (DGs)</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q244787" data-background-interactive>
-						<div>Buildings and canteens</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q19837" data-background-interactive>
-						<div>1.718.000 projects co-funded by the European Union</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q2509317" data-background-interactive>
-						<div>536.000 beneficiaries of EU funds</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q2837746" data-background-interactive>
-						<div>Linked Data Solutions</div>
-					</section>
-				</section>
-				<section>
-					<section ch="2">
-						<h3>Importing data...</h3>
-					</section>
-					<section ch="2">
-						<h3>1. Take any structured data</h3>
-							<img src="assets/buildings.png" style="width: 80%;">
-					</section>
-					<section ch="2">
-						<h3>2. Model the data</h3>
-						<ul>
-						<li>We need entities like buildings, offices...</li>
-						<li>We need properties like address, opening hours, occupant...</li>
-						<li>Whenever possible, reuse Wikidata entities/properties or other existing ones</li>
-						</ul>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q244596" data-background-interactive>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Property:P641" data-background-interactive>
-					</section>
-
-					<section ch="2">
-						<h3> 3. Keep identifiers</h3>
-						<div> Use other identifiers so that one can use them to link to other resources!</div>
-					</section>
-					<section ch="2">
-						<h3> 4. Import using Wikibase APIs</h3>
-						<div> We always use Pywikibot</div>
-						<div> But there are alternatives...</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q242378" data-background-interactive>
-					</section>
-					<section ch="2">
-						<div> The data imported is understandable, aligned with existing concepts, queryable and easy to reuse</div>
-					</section>
-				</section>
-
-				<section>
-					<section ch="2">
-						<h3> Keeping the data in sync...</h3>
-					</section>
-					<section ch="2" data-background-iframe="https://www.wikidata.org/wiki/Q38" data-background-interactive>
-						<div style="margin-bottom: 90%">Wikidata</div>
-					</section>
-					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q15" data-background-interactive>
-						<div style="margin-bottom: 90%">EU Knowledge Graph</div>
-					</section>
-					<section ch="2">
-						<h3> For this we use Wikibase Sync</h3>
-						<a href="https://github.com/the-qa-company/WikibaseSync" target="_blank">https://github.com/the-qa-company/WikibaseSync</a>
-					</section>
-					<section ch="2">
-						<h3>What is it?</h3>
-						<div>Similar to WikibaseImport but...</div>
-						<ol>
-							<li>you can run it locally</li>
-							<li>it can sync items and properties</li>
-							<li>local changes are not overwritten</li>
-						</ol>
-
-					</section>
-					<section ch="2">
-						<h3 style="text-transform: none;">WikibaseUpdater</h3>
-                        <ul>
-                            <li>A bot based on WikibaseSync that checks that the data is synchronised</li>
-                            <li>Refreshed every 5 minutes</li>
-                        </ul>
-					</section>
-				</section>
-				<section>
-					<section ch="2">
-						<h3>Services provided...</h3>
-					</section>
-					<section ch="2">
-						<h3> 1. Data exports</h3>
-						<div>Available at <a href="https://data.linkedopendata.eu">https://data.linkedopendata.eu</a></div>
-					</section>
-					<section ch="2" data-background-iframe="https://data.linkedopendata.eu" data-background-interactive>
-					</section>
-					<section ch="2">
-						<h3> 2. Query Service</h3>
-                        <div>Using SPARQL query language</div>
-						<div>Available at <a href="https://query.linkedopendata.eu">https://query.linkedopendata.eu</a></div>
-					</section>
-					<section ch="2" data-background-iframe="https://query.linkedopendata.eu/#%23defaultView%3AMap%20%0ASELECT%20DISTINCT%20%3Fs1%20%3Fcoordinates%20WHERE%20%7B%0A%20%20%20%20%20%3Fs1%20%20%3Fp1%20%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fentity%2FQ63%3E%20.%20%0A%09%20%3Fs1%20%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fprop%2Fdirect%2FP35%3E%20%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fentity%2FQ8636%3E%20.%20%0A%20%20%20%20%20%3Fs1%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fprop%2Fdirect%2FP127%3E%20%3Fcoordinates%20.%0A%20%7D%20%20LIMIT%201000" data-background-interactive>
-					</section>
-					<section ch="2">
-						<h3> 3. Question Answering</h3>
-						<div>Allows to explore the data using natural language</div>
-						<div>Available at <a href="https://qa.linkedopendata.eu">https://qa.linkedopendata.eu</a></div>
-					</section>
-					<section ch="2" data-background-iframe="https://qa.linkedopendata.eu/qa/full?query=buildings%20by%20dg%20connect&tags=%5B%5D&lang=en&kb=eu&user=commission" data-background-interactive>
-					</section>
-					<section ch="2" data-background-iframe="https://qa.linkedopendata.eu/qa/full?query=who%20is%20the%20president%20of%20france&tags=%5B%5D&lang=en&kb=eu&user=commission" data-background-interactive>
-					</section>
-					<section ch="2" data-background-iframe="https://qa.linkedopendata.eu/qa/full?query=who%20is%20the%20director%20of%20dg%20connect&tags=%5B%5D&lang=en&kb=eu&user=commission" data-background-interactive>
-					</section>
-					<!--<section ch="2">
-						<h3> Can be integrated in chatbots</h3>
-						<div>Available at <a href="https://chatbot.cnect.eu/">https://chatbot.cnect.eu/</a></div>
-					</section>
-					<section ch="4" data-background="assets/dori.png">
-					</section>-->
-				</section>
-				<section ch="3" id="kohesio">
-					<h2>Use case: Kohesio</h2>
-					<h3>Transparent communication on projects co-funded by the EU</h3>
-				</section>
-				<section ch="3">
-					<h2>EU Cohesion Policy</h2>
-					<ul>
-						<li>EU Cohesion Policy supports every year tens of thousands of projects across Europe</li>
-						<li>Cohesion Policy makes up approximately 32.5 % of the EU budget 2014-2020 (about 350 billion euros)</li>
-					</ul>
-				</section>
-<!--				<section ch="3">-->
-<!--					<h2>What is Kohesio?</h2>-->
-<!--					<ul>-->
-<!--						<li>Cohesion funds are managed together with national and local authorities in the 27 EU member states</li>-->
-<!--						<li>The member states have a legal obligation to publish the list of projects and beneficiaries on their national websites</li>-->
-<!--						<li>The goal of Kohesio is to aggregate this data and make it publicly available in an easy, open way</li>-->
-<!--					</ul>-->
-<!--				</section>-->
-<!--				<section ch="3">-->
-<!--					<h2>Data</h2>-->
+<!--				<section ch="0">-->
+<!--					<h2>Outline</h2>-->
 <!--					<ol>-->
-<!--						<li>Dozens of Excel files describing the projects</li>-->
-<!--						<li>Additional vocabularies specific to Cohesion Policy: categories of intervention, thematic objectives, etc.</li>-->
-<!--						<li>Data about geographic entities (NUTS)</li>-->
-<!--						<li>Wikidata</li>-->
+<!--						<li><a href="#/wikibase"><div style="display: inline-block; background: darkcyan; width: 35px; height: 35px"></div> Wikibase</a></li>-->
+<!--						<li><a href="#/EUKG"><div style="display: inline-block; background: rebeccapurple; width: 35px; height: 35px"></div> The EU Knowledge Graph</a></li>-->
+<!--						<li><a href="#/kohesio"><div style="display: inline-block; background: #cd0027; width: 35px; height: 35px"></div> Use Case: Kohesio</a></li>-->
+<!--						<li><a href="#/conclusion"><div style="display: inline-block; background: orange; width: 35px; height: 35px"></div> Conclusion</a></li>-->
 <!--					</ol>-->
 <!--				</section>-->
-				<section ch="3" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q77409" data-background-interactive>
+
+				<section ch="1">
+					<h3>What is the aim of the EDCC KB?</h3>
+					<ul>
+						<li>Allow the European Commission to have <b>access to  the data of the EDCC contact center</b>. This includes data about requests and responses, as well as to all resources used to answer the requests posed by the citizens.</li>
+						<li>Create an infrastructure to <b>facilitate and speed up</b> the work of the Communication Officers in their daily task of answering questions.</li>
+					</ul>
 				</section>
-				<section ch="3">
-					<h2>Enriching the data</h2>
-					<ol>
-						<li>Translating project labels and descriptions</li>
-						<li>Computing location on the map (geocoding)</li>
-						<li>Deducing the NUTS region</li>
-						<li>Linking beneficiaries to Wikidata</li>
-					</ol>
+
+				<section ch="1">
+					<h3>Some stats</h3>
+					<ul>
+						<li>310.409 messages in 41 languages</li>
+						<li>168.588 answers</li>
+						<li>91 Reference replies</li>
+						<li>36 Websites</li>
+					</ul>
 				</section>
-				<section ch="3" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q77409" data-background-interactive>
+
+				<section>
+					<section ch="2">
+						<h2>User Managment</h2>
+					</section>
+					<section ch="2">
+						<h2>User Managment</h2>
+					</section>
+					<section ch="2">
+						<h2>User Managment</h2>
+					</section>
+					<section ch="2">
+						<h2>User Managment</h2>
+					</section>
+
+
+					<section ch="2">
+					<div>Signup / Login Process</div>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/register" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<div>Differentiated access</div>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/login" data-background-interactive>
+					</section>
 				</section>
-				<section ch="3">
-					<h2>Building a website on top</h2>
-					<div>Available at <a href="https://kohesio.ec.europa.eu/">https://kohesio.ec.europa.eu/</a> </div>
+
+				<section>
+					<section ch="2">
+						<h2>Messages</h2>
+					</section>
+
+					<section ch="2">
+						<h3>Goals</h3>
+						<ol>
+							<li>Make the messages accessible and the knowledge reusable</li>
+							<li>Improve the efficiency in answering to incoming messages</li>
+						</ol>
+					</section>
+
+					<section ch="2">
+						<h2>In sync with the CRM (5 min)</h2>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/msg?dateFrom=2022-05-01T00%3A00%3A00.000Z&dateTo=2022-05-31T23%3A59%3A59.999Z&page=1" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h3>Spam detection</h3>
+					</section>
+					<section ch="2" data-background-iframe="https://staging-kb-edcc.conectys.com/res/msg?dateFrom=2022-05-01T00%3A00%3A00.000Z&dateTo=2022-05-31T23%3A59%3A59.999Z&page=1&spam=true" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h3>NLP pipeline for every incoming message</h3>
+						<ol>
+							<li>Detect the language</li>
+							<li>Compute the english translation (if it is not english) EC Translation</li>
+							<li>Compute the sentiment</li>
+							<li>Compute the class of the message (200 classes)</li>
+						</ol>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/msg/view?id=212265992" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h3>Every message is RDF-ized</h3>
+					</section>
+					<section ch="2" data-background-iframe="https://staging-kb-edcc.conectys.com/facet-browser?uri=https%3A%2F%2Feuropa.eu%2Feuropean-union%2Fcontact%2Fmessage%2F212265992" data-background-interactive>
+					</section>
+
+
+					<section ch="2">
+						<h3>Indicate resources to answer each message</h3>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/msg/view?id=212265677" data-background-interactive>
+					</section>
 				</section>
-				<section ch="3" data-background-iframe="https://kohesio.ec.europa.eu/" data-background-interactive>
+
+				<section>
+					<section ch="2">
+						<h2>Websites</h2>
+					</section>
+					<section ch="2">
+					<h3>Goals</h3>
+						<ol>
+							<li>Index websites from the commission</li>
+							<li>Make these websites searchable</li>
+						</ol>
+					</section>
+
+					<section ch="2">
+						<h2>Crawl a website</h2>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/msg?dateFrom=2022-05-01T00%3A00%3A00.000Z&dateTo=2022-05-31T23%3A59%3A59.999Z&page=1" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h3>Local and online copy</h3>
+					</section>
+					<section ch="2" data-background-iframe="https://staging-kb-edcc.conectys.com/res/web/view?url=https%3A%2F%2Fec.europa.eu%2Ffpi%2Fwhat-we-do%2Fanti-torture-measures_en" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h3>Ability to extract a specific section</h3>
+					</section>
+					<section ch="2" data-background-iframe="https://staging-kb-edcc.conectys.com/res/web/view?url=https%3A%2F%2Fec.europa.eu%2Ffpi%2Fwhat-we-do%2Fanti-torture-measures_en" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h3>RDF-ized version</h3>
+					</section>
+					<section ch="2" data-background-iframe="https://staging-kb-edcc.conectys.com/facet-browser?uri=https%3A%2F%2Fec.europa.eu%2Ffpi%2Fwhat-we-do%2Fanti-torture-measures_en" data-background-interactive>
+					</section>
+
 				</section>
-				<!--<section ch="3">
-					<h2>To summarize</h2>
-					<ol>
-						<li>We integrated structured data from different sources into one uniform model</li>
-						<li>The data is enriched in various ways, thereby increasing its value</li>
-						<li>The data is openly accessible by citizens, showing the impact of EU funds in their region</li>
-					</ol>
-				</section>-->
+
+				<section>
+					<section ch="2">
+						<h2>Reference Reply</h2>
+					</section>
+					<section ch="2">
+						<h3>Goals</h3>
+						<ol>
+							<li>Collect replies given by DGs of the commission</li>
+							<li>Make these reference replies searchable</li>
+						</ol>
+					</section>
+
+					<section ch="2">
+						<h2>imported from the CRM</h2>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h2>Searchable</h2>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref?keywords=hungary" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h3>RDF-ized version</h3>
+					</section>
+					<section ch="2" data-background-iframe="https://staging-kb-edcc.conectys.com/facet-browser?uri=https%3A%2F%2Feuropa.eu%2Feuropean-union%2Fcontact%2Freference_reply%2F9220158029494774802" data-background-interactive>
+					</section>
+				</section>
+
+				<section>
+					<section ch="2">
+						<h2>SPARQL endpoint</h2>
+					</section>
+					<section ch="2">
+						<h3>Goals</h3>
+						<ol>
+							<li>Encode the data using open standards</li>
+							<li>Allow analytics on top of the data</li>
+						</ol>
+					</section>
+
+					<section ch="2">
+						<h3>Analytics</h3>
+					</section>
+					<section ch="2">
+						<h4>Number of messages over the months of the year</h4>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref" data-background-interactive>
+					</section>
+					<section ch="2">
+						<h4>Ratio of positive vs. negative messages</h4>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h4>Number of messages that are not spam</h4>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h4>Number of negative messages that are not spam over time</h4>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h4>Number of messages by language</h4>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref" data-background-interactive>
+					</section>
+
+					<section ch="2">
+						<h4>Number of messages by main topic</h4>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref" data-background-interactive>
+					</section>
+				</section>
+
+				<section>
+					<section ch="2">
+						<h2>Machine learning features</h2>
+					</section>
+					<section ch="2">
+						<h3>Goals</h3>
+						<ol>
+							<li>Use AI techniques to analyze incoming messages in EDCC</li>
+							<li>Collect training data for EDCC specific tasks/scenarios</li>
+							<li>Monitor models that are in production</li>
+						</ol>
+					</section>
+
+					<section ch="2">
+						<h4>Models</h4>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/ml" data-background-interactive>
+					</section>
+				</section>
+
+				<section>
+					<section ch="2">
+						<h2>Secured APIs to reuse the functionality of the EDCC KB</h2>
+					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/apiDoc" data-background-interactive>
+					</section>
+				</section>
+
+
+
 				<section id="conclusion" ch="4">
 					<h2>Conclusion</h2>
 					<div style="float: left">We have shown:</div>
 					<ol>
-						<li>how Wikibase is used as the underlying infrastructure for the EU Knowledge Graph</li>
-						<li>the contents of the EU KG, how the data is ingested, maintained fresh and which services are offered</li>
-						<li>a concrete use case: Kohesio</a></li>
+						<li>What is the content/use of the EDCC KB</li>
+						<li>How the knowledge in EDCC is integrated in a Knowledge Graph and combined with AI techniques</li>
+						<li>What are the current functionalities of the EDCC KB</li>
 					</ol>
 				</section>
 				<section ch="0">
 					<div>Acknowledgements:</div>
 					<ul>
-						<li>DORIS Team @ DG CNECT</li>
-						<li>Knowledge Management Team @ DG REGIO</li>
-						<li>Wikimedia Deutschland (WMDE)</li>
+						<li>DG COMM</li>
+						<li>DG IT</li>
+						<li>ESN</li>
+						<li>Connectys</li>
 					</ul>
 				</section>
 				<section ch="-1">
