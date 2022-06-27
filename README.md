@@ -9,9 +9,10 @@ To deploy:
 - cd 2022-05-24-EDCC
 - npm install
 - npm start
+- open browser at http://localhost:8000
 
 #### To change the presentation
 
-- change the index.html website
+- change the index.html file
 
-if the application is running, just reload the browser window.
+If the application is running, just reload the browser window to see the changes.
