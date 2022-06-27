@@ -8,3 +8,8 @@ To deploy:
 - npm install
 - npm start
 
+#### To change the presentation
+
+- change the index.html website
+
+if the application is running, just reload the browser window.
