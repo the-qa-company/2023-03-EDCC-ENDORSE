@@ -221,8 +221,7 @@
 				<section ch="1">
 					<h3>Solution: EDCC KB</h3>
 					<ul>
-						<li>An application to <b>facilitate and speed up</b> the work of the Communication Of
-						ficers in their daily task of answering questions.</li>
+						<li>An application to <b>facilitate and speed up</b> the work of the Communication Officers in their daily task of answering questions.</li>
 						<li>An application to <b>monitor and analyse</b> the operations.</li>
 				</section>
 
@@ -298,8 +297,8 @@
 					<section ch="2">
 						<h2>In sync with the CRM (5 min)</h2>
 					</section>
-					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/msg" data-background-interactive>
-					</section>
+					<!-- <section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/msg" data-background-interactive>
+					</section> -->
 
 					<section ch="2">
 						<h3>Spam detection</h3>
@@ -360,12 +359,12 @@
 					<section ch="2">
 						<h3>RDF-ized version</h3>
 					</section>
-					<section ch="2" data-background-iframe="https://dev-kb-edcc.conectys.com/facet-browser?uri=https%3A%2F%2Fec.europa.eu%2Fcommission%2Fpresscorner%2Fdetail%2Fen%2Fip_22_4273" data-background-interactive>
+					<section ch="1" data-background-iframe="https://dev-kb-edcc.conectys.com/res/web" data-background-interactive>
 					</section>
 
 				</section>
 
-				<section>
+				<!-- <section>
 					<section ch="2" style="height: 100%;">
 						<h2 style="position: absolute; left: 50%; top: 20%; transform: translate(-50%, -50%);">Reference&nbsp;Reply</h2>
 						<img src="assets/undraw/reviewed-docs.svg" height="400" style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%);">
@@ -382,9 +381,9 @@
 						<h2>imported from the CRM</h2>
 					</section>
 					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref" data-background-interactive>
-					</section>
+					</section> -->
 
-					<section ch="2">
+					<!-- <section ch="2">
 						<h2>Searchable</h2>
 					</section>
 					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/res/ref?keywords=hungary" data-background-interactive>
@@ -395,7 +394,7 @@
 					</section>
 					<section ch="2" data-background-iframe="https://staging-kb-edcc.conectys.com/facet-browser?uri=https%3A%2F%2Feuropa.eu%2Feuropean-union%2Fcontact%2Freference_reply%2F9220158029494774802" data-background-interactive>
 					</section>
-				</section>
+				</section> -->
 
 				<section>
 					<section ch="2" style="height: 100%;">
@@ -434,7 +433,7 @@
 					</section>
 					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/endpoint?tabs=%5B%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5CnSELECT+%3Fmon+%28count%28%3Fx%29+as+%3Fc%29+WHERE+%7B%5Cn%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%22%2C%22name%22%3A%22Query%22%7D%2C%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5Cn%5Cnselect+%3Fmon+%28%3Ftrue%2F%3Ffalse+as+%3Fratio%29+where+%7B%5Cn%5Ct%7BSELECT+%28count%28%3Fx%29+as+%3Ftrue%29+%3Fmon+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fsentiment%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fins%2Fnegative%3E+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fspam%3E+%5C%22false%5C%22%5E%5E%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23boolean%3E+.%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%5Ct%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%7D%5Cn%5Cn%5Ct%7BSELECT+%28count%28%3Fx%29+as+%3Ffalse%29+%3Fmon+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn++++++%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fspam%3E+%5C%22false%5C%22%5E%5E%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23boolean%3E+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%5Ct%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%7D%5Cn%7D%22%2C%22name%22%3A%22Query+1%22%7D%5D" data-background-interactive>
 					</section>
-					<section ch="2">
+					<!-- <section ch="2">
 						<h4>Number of messages by language</h4>
 					</section>
 					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/endpoint?tabs=%5B%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5CnSELECT+%3Flanguage+%28count%28%3Fx%29+as+%3Fc%29+WHERE+%7B%5Cn%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Flanguage%3E+%3Flanguage+.%5Cn++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%7D+GROUP+BY+%3Flanguage+order+by+DESC%28%3Fc%29%22%2C%22name%22%3A%22Query%22%7D%2C%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5Cn%5Cnselect+%3Fmon+%28%3Ftrue%2F%3Ffalse+as+%3Fratio%29+where+%7B%5Cn%5Ct%7BSELECT+%28count%28%3Fx%29+as+%3Ftrue%29+%3Fmon+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fsentiment%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fins%2Fnegative%3E+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fspam%3E+%5C%22false%5C%22%5E%5E%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23boolean%3E+.%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%5Ct%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%7D%5Cn%5Cn%5Ct%7BSELECT+%28count%28%3Fx%29+as+%3Ffalse%29+%3Fmon+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn++++++%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fspam%3E+%5C%22false%5C%22%5E%5E%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23boolean%3E+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%5Ct%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%7D%5Cn%7D%22%2C%22name%22%3A%22Query+1%22%7D%5D" data-background-interactive>
@@ -444,7 +443,7 @@
 						<h4>Number of messages by main topic</h4>
 					</section>
 					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/endpoint?tabs=%5B%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5CnSELECT+%3Ftopic+%28count%28%3Fx%29+as+%3Fc%29+WHERE+%7B%5Cn%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Ftopic1%3E+%3Ftopic+.%5Cn++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%7D+GROUP+BY+%3Ftopic+order+by+DESC%28%3Fc%29%22%2C%22name%22%3A%22Query%22%7D%2C%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5Cn%5Cnselect+%3Fmon+%28%3Ftrue%2F%3Ffalse+as+%3Fratio%29+where+%7B%5Cn%5Ct%7BSELECT+%28count%28%3Fx%29+as+%3Ftrue%29+%3Fmon+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fsentiment%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fins%2Fnegative%3E+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fspam%3E+%5C%22false%5C%22%5E%5E%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23boolean%3E+.%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%5Ct%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%7D%5Cn%5Cn%5Ct%7BSELECT+%28count%28%3Fx%29+as+%3Ffalse%29+%3Fmon+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn++++++%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fspam%3E+%5C%22false%5C%22%5E%5E%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23boolean%3E+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%5Ct%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%7D%5Cn%7D%22%2C%22name%22%3A%22Query+1%22%7D%5D" data-background-interactive>
-					</section>
+					</section> -->
 				</section>
 
 				<section>
@@ -452,14 +451,14 @@
 						<h2 style="position: absolute; left: 50%; top: 20%; transform: translate(-50%, -50%);">Machine&nbsp;Learning Features</h2>
 						<img src="assets/undraw/chatbot.svg" height="350" style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%);">
 					</section>
-					<section ch="2">
+					<!-- <section ch="2">
 						<h3>Goals</h3>
 						<ol>
 							<li>Use AI techniques to analyze incoming messages in EDCC</li>
 							<li>Collect training data for EDCC specific tasks/scenarios</li>
 							<li>Monitor models that are in production</li>
 						</ol>
-					</section>
+					</section> -->
 
 					<section ch="2">
 						<h4>Models</h4>
@@ -490,8 +489,8 @@
 					</section>
 					<section ch="2">
 						<h3>Allow to generate analitic queries</h3>
-						<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/endpoint?tabs=%5B%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5CnSELECT+%3Flanguage+%28count%28%3Fx%29+as+%3Fc%29+WHERE+%7B%5Cn%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Flanguage%3E+%3Flanguage+.%5Cn++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%7D+GROUP+BY+%3Flanguage+order+by+DESC%28%3Fc%29%22%2C%22name%22%3A%22Query%22%7D%2C%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5Cn%5Cnselect+%3Fmon+%28%3Ftrue%2F%3Ffalse+as+%3Fratio%29+where+%7B%5Cn%5Ct%7BSELECT+%28count%28%3Fx%29+as+%3Ftrue%29+%3Fmon+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fsentiment%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fins%2Fnegative%3E+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fspam%3E+%5C%22false%5C%22%5E%5E%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23boolean%3E+.%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%5Ct%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%7D%5Cn%5Cn%5Ct%7BSELECT+%28count%28%3Fx%29+as+%3Ffalse%29+%3Fmon+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn++++++%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Fspam%3E+%5C%22false%5C%22%5E%5E%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23boolean%3E+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%5Ct%7D+GROUP+BY+%28month%28%3Fdate%29+AS+%3Fmon%29+order+by+%3Fmon%7D%5Cn%7D%22%2C%22name%22%3A%22Query+1%22%7D%5D" data-background-interactive>
 					</section>
+					<section ch="1" data-background-iframe="https://staging-kb-edcc.conectys.com/endpoint?tabs=%5B%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5CnSELECT+%3Ftopic+%28count%28%3Fx%29+as+%3Fc%29+WHERE+%7B%5Cn%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Ftopic1%3E+%3Ftopic+.%5Cn++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%7D+GROUP+BY+%3Ftopic+order+by+DESC%28%3Fc%29%22%2C%22name%22%3A%22Query%22%7D%2C%7B%22query%22%3A%22PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%5CnPREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%5Cn%5CnSELECT+%3Flanguage+%28count%28%3Fx%29+as+%3Fc%29+%3Flanguage+WHERE+%7B%5Cn%5Ct%5Ct%3Fx+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2FQuestion%3E+.%5Cn%5Ct%5Ct%3Fx+%3Chttp%3A%2F%2Fdata.europa.eu%2Fett%2Fdef%2Flanguage%3E+%3Flanguage+.%5Cn++%5Ct%5Ct%3Fx++%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fissued%3E+%3Fdate+.%5Cn++++++%5Ct%5Cn++++++++FILTER+%28YEAR%28%3Fdate%29%3D2022%29%5Cn%7D+GROUP+BY+%3Flanguage+order+by+DESC%28%3Fc%29%5Cn%22%2C%22name%22%3A%22Query+1%22%7D%5D" data-background-interactive>
 					</section>
 				</section>
 
